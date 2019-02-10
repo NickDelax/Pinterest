@@ -97,43 +97,9 @@ class ViewController: UIViewController {
         ub.backgroundColor = UIColor(red: 80/255, green: 101/255, blue: 161/255, alpha: 1)
         ub.setTitle("Register", for: .normal)
         ub.translatesAutoresizingMaskIntoConstraints = false
-        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         return ub
     }()
-    
-    @objc func handleButton(){
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
-            print("Not valid")
-            return
-        }
-        Auth.auth().createUser(withEmail: email, password: password) { (user:User?, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            
-            guard let uid = user?.uid else {
-                return
-            }
-            
-            //sucessfully
-            var ref = Database.database().reference(fromURL: "https://pinterest-7574e.firebaseio.com/")
-            let values = ["name" :name, "email": email]
-            let usersRef = ref.child("users").child(uid)
-            usersRef.updateChildValues(values, withCompletionBlock: { (error, databaseRef:DatabaseReference?) in
-                if  error != nil {
-                    print(error)
-                }
-            })
-            
-            // successfully included
-            print("Saved user successfully into our database")
-            
-        }
-    }
-    
 }
-
 
 extension UIColor {
     
