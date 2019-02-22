@@ -92,13 +92,43 @@ class ViewController: UIViewController {
         return view
     }()
     
-    lazy var firstButton : UIButton = {
+    let firstButton : UIButton = {
         let ub = UIButton()
-        ub.backgroundColor = UIColor(red: 80/255, green: 101/255, blue: 161/255, alpha: 1)
-        ub.setTitle("Register", for: .normal)
+        ub.backgroundColor =  UIColor(r: 235, g: 101, b: 90)
+        ub.setTitle("Registrarse", for: .normal)
         ub.translatesAutoresizingMaskIntoConstraints = false
+        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         return ub
     }()
+    
+    @objc func handleButton(){
+        print("Hello World")
+        if let email = emailTextField.text, let pass = passwordTextField.text, let name = nameTextField.text{
+            print(email)
+            print(pass)
+            Auth.auth().createUser(withEmail: email, password: pass) { (data:AuthDataResult?, error) in
+                let user = data?.user
+                if error != nil {
+                    print(error.debugDescription)
+                }
+                
+                let ref = Database.database().reference(fromURL: "")
+                
+                if let uid = user?.uid{
+                    
+                    let usersRef = ref.child("users").child(uid)
+                    usersRef.updateChildValues(["name" : name, "email" : email, "password": pass])
+
+                    let msgsRef = ref.child("message").child(uid)
+                    msgsRef.updateChildValues(["message" : "Test"])
+                    
+                    ref.child("message").child(uid).removeValue()
+                    
+                }
+            }
+        }
+    }
+    
 }
 
 extension UIColor {
@@ -108,4 +138,5 @@ extension UIColor {
     }
     
 }
+
 
