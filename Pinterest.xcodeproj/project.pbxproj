@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050B6795224D932B00B42808 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B6794224D932B00B42808 /* EmailController.swift */; };
+		050B6797224D935B00B42808 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B6796224D935B00B42808 /* Login.swift */; };
+		050B6799224D93CC00B42808 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B6798224D93CC00B42808 /* View.swift */; };
+		050B679F224D944000B42808 /* Registe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B679E224D944000B42808 /* Registe.swift */; };
 		0544B0FE220D107E002A932E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0544B0FD220D107E002A932E /* GoogleService-Info.plist */; };
+		05BF4619224DB48D008B91D7 /* Loading.GIF in Resources */ = {isa = PBXBuildFile; fileRef = 05BF4618224DB48D008B91D7 /* Loading.GIF */; };
 		05E41CAA2203D0E300A9C07A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E41CA92203D0E300A9C07A /* AppDelegate.swift */; };
 		05E41CAC2203D0E300A9C07A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E41CAB2203D0E300A9C07A /* ViewController.swift */; };
 		05E41CAF2203D0E300A9C07A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E41CAD2203D0E300A9C07A /* Main.storyboard */; };
@@ -17,7 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050B6794224D932B00B42808 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
+		050B6796224D935B00B42808 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		050B6798224D93CC00B42808 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		050B679E224D944000B42808 /* Registe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registe.swift; sourceTree = "<group>"; };
 		0544B0FD220D107E002A932E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05BF4618224DB48D008B91D7 /* Loading.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Loading.GIF; path = ../../../../Downloads/Loading.GIF; sourceTree = "<group>"; };
 		05E41CA62203D0E300A9C07A /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E41CA92203D0E300A9C07A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E41CAB2203D0E300A9C07A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +75,11 @@
 			children = (
 				05E41CA92203D0E300A9C07A /* AppDelegate.swift */,
 				05E41CAB2203D0E300A9C07A /* ViewController.swift */,
+				050B6794224D932B00B42808 /* EmailController.swift */,
+				050B6796224D935B00B42808 /* Login.swift */,
+				050B679E224D944000B42808 /* Registe.swift */,
+				05BF4618224DB48D008B91D7 /* Loading.GIF */,
+				050B6798224D93CC00B42808 /* View.swift */,
 				05E41CAD2203D0E300A9C07A /* Main.storyboard */,
 				05E41CB02203D0E600A9C07A /* Assets.xcassets */,
 				05E41CB22203D0E600A9C07A /* LaunchScreen.storyboard */,
@@ -88,7 +103,6 @@
 				2EFB5667C014B620CC142858 /* Pods-Pinterest.debug.xcconfig */,
 				ACFF83C48ABEB1273B492E9B /* Pods-Pinterest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +170,7 @@
 				0544B0FE220D107E002A932E /* GoogleService-Info.plist in Resources */,
 				05E41CB12203D0E600A9C07A /* Assets.xcassets in Resources */,
 				05E41CAF2203D0E300A9C07A /* Main.storyboard in Resources */,
+				05BF4619224DB48D008B91D7 /* Loading.GIF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +188,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Pinterest/Pods-Pinterest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -181,6 +197,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +236,10 @@
 			files = (
 				05E41CAC2203D0E300A9C07A /* ViewController.swift in Sources */,
 				05E41CAA2203D0E300A9C07A /* AppDelegate.swift in Sources */,
+				050B679F224D944000B42808 /* Registe.swift in Sources */,
+				050B6799224D93CC00B42808 /* View.swift in Sources */,
+				050B6795224D932B00B42808 /* EmailController.swift in Sources */,
+				050B6797224D935B00B42808 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
