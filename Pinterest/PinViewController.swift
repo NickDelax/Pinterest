@@ -15,7 +15,7 @@ var screenSize: CGRect!
 var screenWidth: CGFloat!
 var screenHeight: CGFloat!
 
-class HomeFeedCollectionViewController: UICollectionViewController {
+class PinViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         self.navigationItem.title = "Bienvenido"
