@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import SwiftyGif
 
-class SplashScreen: UIViewController {
+class Splash: UIViewController {
     
     let animation = Animation()
     
@@ -29,7 +29,7 @@ class SplashScreen: UIViewController {
     
 }
 
-extension SplashScreen: SwiftyGifDelegate {
+extension Splash: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         print(" ")
         let login = LoginViewController()
