@@ -20,7 +20,6 @@ class PinViewController: UICollectionViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "Bienvenido"
         
-        //Titulo para el boton de retroceder
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
